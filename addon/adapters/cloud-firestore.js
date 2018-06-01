@@ -389,7 +389,7 @@ export default RESTAdapter.extend({
     if (isDeletingMainDoc) {
       batch.delete(docRef);
     } else {
-      batch.set(docRef, payload, { merge: true });
+      batch.set(docRef, payload, { merge: false });
     }
 
     this.addIncludesToBatch(batch, db, snapshot);
